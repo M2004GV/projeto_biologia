@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README - Simulação de Plasticidade Sináptica</title>
-</head>
-<body>
-
 <h1>Simulação de Plasticidade Sináptica em Redes Neurais com Hodgkin-Huxley e STDP</h1>
 
 <h2>📋 Sobre o Projeto</h2>
@@ -159,6 +150,3 @@ git push origin feature/nova-funcionalidade
     <li>Bi, G. Q., & Poo, M. M. (1998). <em>Synaptic modifications in cultured hippocampal neurons: dependence on spike timing, synaptic strength, and postsynaptic cell type</em>. Journal of Neuroscience, 18(24), 10464-10472.</li>
     <li>Stimberg, M., Brette, R., & Goodman, D. F. (2019). <em>Brian 2, an intuitive and efficient neural simulator</em>. Elife, 8, e47314.</li>
 </ul>
-
-</body>
-</html>
