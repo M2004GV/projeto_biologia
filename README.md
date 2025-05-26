@@ -1,19 +1,26 @@
 <h1>Simulação de Plasticidade Sináptica em Redes Neurais com Hodgkin-Huxley e STDP</h1>
   
 📋 Sobre o Projeto
- Este projeto implementa uma simulação computacional de redes neurais recorrentes utilizando o modelo Hodgkin-Huxley (HH) para dinâmica neuronal e Plasticidade Dependente do Tempo de Disparos (STDP) para modificação sináptica.
+ <p>Este projeto implementa uma simulação computacional de redes neurais recorrentes utilizando o modelo Hodgkin-Huxley (HH) para dinâmica neuronal e Plasticidade Dependente do Tempo de Disparos (STDP) para modificação sináptica.<p>
+<br>
+<br>
 🎯 Objetivos
 - Simular redes totalmente conectadas (TCN) de neurônios HH
 - Implementar mecanismo STDP com controle dinâmico (on/off)
 - Detectar e analisar padrões de burst neuronal
 - Estudar a evolução da conectividade sináptica ao longo do tempo
 - Fornecer ferramentas para análise de plasticidade sináptica
+
+<br>
+<br>
 ✨ Características Principais
 - Modelo Hodgkin-Huxley: Dinâmica realista de neurônios
 - STDP Controlável: Ativação/desativação durante simulação
 - Detecção de Bursts: Algoritmo automático baseado em limiares
 - Redes Configuráveis: Número de neurônios e conectividade ajustáveis
 - Análise Completa: Visualizações e métricas estatísticas
+<br>
+<br>
 🛠️ Instalação
  # Pré-requisitos
 - Python 3.8 ou superior
@@ -21,29 +28,29 @@
 Dependências
 
 ## Configuração inicial do repositório
+<br>
+<br>
 
-# Criar diretório do projeto (via terminal)
+ Criar diretório do projeto (via terminal)
 mkdir projeto_biologia
 cd projeto_biologia
 
-# Inicializar repositório
+ Inicializar repositório
 git init
 
-# Criar ambiente virtual
+ Criar ambiente virtual
 python -m venv venv
 
-# Ativar ambiente virtual
-# No Windows:
+ Ativar ambiente virtual
+No Windows:
 venv\Scripts\activate
 
-# No macOS/Linux:
-source venv/bin/activate
 !!! Verificar se o ambiente está ativo
 
-# Clone o repositório
+ Clone o repositório
 git clone https://github.com/M2004GV/projeto_biologia.git
 
-# Instale as dependências
+ Instale as dependências
 pip install -r requirements.txt
 
 <h2>🔄 Guia de Colaboração com Git<h2>
@@ -93,7 +100,6 @@ git rebase main
 git push origin feature/nova-funcionalidade
 
 ´´´
-
 
 📚 Referências
 - Hodgkin, A. L., & Huxley, A. F. (1952). A quantitative description of membrane current and its application to conduction and excitation in nerve. The Journal of Physiology, 117(4), 500-544.
