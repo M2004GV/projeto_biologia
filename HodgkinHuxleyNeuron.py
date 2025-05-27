@@ -88,12 +88,12 @@ class HodgkinHuxleyNeuron:
             lambda v: 0.125*exp(-(v/mV + 65)/80)/ms
         )
 
-    def set_stimulus(self, times, values, dt):
+    def set_stimulus(self, values, dt, times=None):
         """
         Define um estímulo I_syn como TimedArray.
-        times: lista de tempos (não usado diretamente, apenas para referência)
         values: lista de valores de corrente em amp/cm**2
         dt: intervalo entre amostras (Quantity de tempo)
+        times: opcional
         """
         self.stimulus = TimedArray(values*amp/cm**2, dt=dt)
         # Atualiza namespace dinamicamente
