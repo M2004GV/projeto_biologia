@@ -48,6 +48,8 @@ class HodgkinHuxleyNeuron:
         self.neuron = NeuronGroup(
             1,
             model=self.eqs,
+            threshold='v>0*mV',        # disparo quando v ultrapassa 0 mV
+            reset='v = v_rest',        # após o spike, v volta ao repouso
             method='exponential_euler',
             namespace={
                 'C':        self.C,
@@ -56,7 +58,8 @@ class HodgkinHuxleyNeuron:
                 'g_l':      self.g_l,
                 'v_na':     self.v_na,
                 'v_k':      self.v_k,
-                'v_l':      self.v_l
+                'v_l':      self.v_l,
+                'v_rest':   self.v_rest  # necessário para o reset
             }
         )
 
