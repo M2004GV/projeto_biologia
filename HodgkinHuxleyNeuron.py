@@ -41,7 +41,7 @@ class HodgkinHuxleyNeuron:
         alpha_n = 0.01*(v/mV + 55)/(1 - exp(-(v/mV + 55)/10))/ms : Hz
         beta_n  = 0.125*exp(-(v/mV + 65)/80)/ms                 : Hz
 
-        I_syn : amp/cm**2    # corrente de entrada externa
+        I_syn : amp/metre**2    # corrente de entrada externa
         '''
 
         # Criar NeuronGroup
