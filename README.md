@@ -9,6 +9,9 @@
     - Simula potencial de membrana e spikes em resposta a estímulos
     - Instruções de uso em main.py
 
+    - Adicionado mecanismo stdp em synapses
+    - Classe: STDPPlasticSynapse.py
+
 <h2>🎯 Objetivos</h2>
 <ul>
     <li>Simular redes totalmente conectadas (TCN) de neurônios HH</li>
