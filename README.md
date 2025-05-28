@@ -5,9 +5,9 @@
 
 # Novidades
 - Adicionado modelo de neurônio Hodgkin–Huxley
-    - Classe: src/models/hodgkin_huxley.py
+    - Classe: HodgkinHuxleyNeuron.py
     - Simula potencial de membrana e spikes em resposta a estímulos
-    - Instruções de uso em run_hh.py
+    - Instruções de uso em main.py
 
 <h2>🎯 Objetivos</h2>
 <ul>
