@@ -1,5 +1,3 @@
-# src/models/fully_connected_network.py
-
 import numpy as np
 from brian2 import start_scope, defaultclock, ms
 from HodgkinHuxleyNeuron import HodgkinHuxleyNeuron
