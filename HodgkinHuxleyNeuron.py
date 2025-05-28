@@ -89,7 +89,6 @@ class HodgkinHuxleyNeuron:
                 color='tab:blue')
         ax.set(xlabel='Tempo (ms)', ylabel='V (mV)',
                title='Potencial de Membrana')
-        # Se quiser raster de spikes:
         if len(self.spike_mon.t):
             ax.scatter(self.spike_mon.t/ms,
                        [0]*len(self.spike_mon.t),
