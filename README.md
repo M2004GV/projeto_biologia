@@ -7,7 +7,7 @@
 - Adicionado modelo de neurônio Hodgkin–Huxley
     - Classe: HodgkinHuxleyNeuron.py
     - Simula potencial de membrana e spikes em resposta a estímulos
-    - Instruções de uso em main.py
+
 
     - Adicionado mecanismo stdp em synapses
     - Classe: STDPPlasticSynapse.py
