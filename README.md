@@ -30,6 +30,31 @@
     <li>Análise Completa: Visualizações e métricas estatísticas</li>
 </ul>
 
+# Parâmetros de configuração 
+
+Parâmetros do modelo HH:
+
+| Parâmetro |	Valor	| Unidade|	Descrição|
+|   ---     |    ---    |   ---  |     ---   |
+|deli	|15.0	|ms	|Delay sináptico|
+|vna	|115.0	|mV	|Potencial de reversão Na+|
+|vk	|-12.0	|mV	|Potencial de reversão K+|
+|vl	|10.6	|mV	|Potencial de reversão leak|
+|gnabar|	36.0|	mS/cm²|	Condutância máxima Na+|
+|gkbar	|12.0|	mS/cm²|	Condutância máxima K+|
+|gl	|0.1	|mS/cm²|	Condutância leak|
+
+Parâmetros Sinápticos
+
+|Parâmetro|	Valor|	Unidade|	Descrição|
+|   ---     |    ---    |   ---  |     ---   |
+|taus	|10.0	|ms|	Constante de tempo lenta|
+|tauf	|1.0	|ms|	Constante de tempo rápida|
+|gsyn	|3.6	|mS/cm²|	Condutância sináptica|
+|vsyn	|70.0	|mV	|Potencial sináptico|
+|Vthresh	|40.0|	mV|	Limiar de disparo|
+
+
 <h2>🛠️ Instalação</h2>
 <h3>Pré-requisitos</h3>
 <ul>
