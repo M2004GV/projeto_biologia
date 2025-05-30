@@ -3,6 +3,7 @@ from brian2 import start_scope, defaultclock, ms
 from HodgkinHuxleyNeuron import HodgkinHuxleyNeuron
 from STDPPlasticSynapse import STDPPlasticSynapse
 
+
 class FullyConnectedNetwork:
     """
     Rede totalmente conectada de N neurônios Hodgkin–Huxley,
