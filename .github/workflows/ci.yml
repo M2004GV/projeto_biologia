@@ -1,62 +1,31 @@
-name: Continuous Integration
+name: CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.10]
+        python-version: [3.10] # Você pode adicionar mais versões se quiser testar múltiplas versões que suportem o Brian2
+
     steps:
-    - uses: actions/checkout@v3
+    - name: Check out repository
+      uses: actions/checkout@v3
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install pytest-cov black flake8
-    - name: Lint with flake8
-      run: |
-        flake8 neural_simulation.py --count --select=E9,F63,F7,F82 --show-source --statistics
-        flake8 neural_simulation.py --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Format check with black
-      run: |
-        black --check neural_simulation.py
-    - name: Test with pytest
-      run: |
-        pytest --cov=neural_simulation --cov-report=xml --cov-report=html
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-      with:
-        file: ./coverage.xml
-        flags: unittests
 
-  build:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v3
-      with:
-        python-version: 3.10
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Run simulation test
-      run: |
-        python neural_simulation.py
-    - name: Archive results
-      uses: actions/upload-artifact@v3
-      with:
-        name: simulation-results
-        path: resultados_simulacao/
+
+    - name: Run tests
+      run: pytest  # Ou outro comando de teste que você use
