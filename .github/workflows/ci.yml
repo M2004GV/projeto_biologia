@@ -12,34 +12,27 @@ jobs:
     strategy:
       matrix:
         python-version: [3.8, 3.9, "3.10"]
-
     steps:
     - uses: actions/checkout@v3
-    
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pytest-cov black flake8
-    
     - name: Lint with flake8
       run: |
-        flake8 src tests --count --select=E9,F63,F7,F82 --show-source --statistics
-        flake8 src tests --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    
+        flake8 neural_simulation.py --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 neural_simulation.py --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Format check with black
       run: |
-        black --check src tests
-    
+        black --check neural_simulation.py
     - name: Test with pytest
       run: |
-        pytest tests/ --cov=src --cov-report=xml --cov-report=html
-    
+        pytest --cov=neural_simulation --cov-report=xml --cov-report=html
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
@@ -49,26 +42,21 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v3
-    
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
         python-version: 3.9
-    
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    
     - name: Run simulation test
       run: |
-        python examples/basic_simulation.py
-    
+        python neural_simulation.py
     - name: Archive results
       uses: actions/upload-artifact@v3
       with:
         name: simulation-results
-        path: results/
+        path: resultados_simulacao/
