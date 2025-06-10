@@ -3,15 +3,6 @@
 <h2>📋 Sobre o Projeto</h2>
 <p>Este projeto implementa uma simulação computacional de redes neurais recorrentes utilizando o modelo Hodgkin-Huxley (HH) para dinâmica neuronal e Plasticidade Dependente do Tempo de Disparos (STDP) para modificação sináptica.</p>
 
-# Novidades
-- Adicionado modelo de neurônio Hodgkin–Huxley
-    - Classe: HodgkinHuxleyNeuron.py
-    - Simula potencial de membrana e spikes em resposta a estímulos
-
-
-    - Adicionado mecanismo stdp em synapses
-    - Classe: STDPPlasticSynapse.py
-
 <h2>🎯 Objetivos</h2>
 <ul>
     <li>Simular redes totalmente conectadas (TCN) de neurônios HH</li>
